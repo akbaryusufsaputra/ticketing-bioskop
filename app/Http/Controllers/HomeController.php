@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Ticket;
+use App\User;
+use Illuminate\Support\Facades\Hash;
 
 class HomeController extends Controller
 {
@@ -30,6 +32,17 @@ class HomeController extends Controller
 
     public function adminHome()
     {
+        return view('admin.adminHome');
+    }
+
+    public function tambahuser(Request $request)
+    {
+        user::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'is_admin' => $request->is_admin
+        ]);
         return view('admin.adminHome');
     }
 }

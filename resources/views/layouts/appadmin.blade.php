@@ -59,6 +59,7 @@
                     <ul class="navbar-nav ml-auto">
                         <a class="nav-link" href="/admin/ticket"><b>Ticket</b></a>
                         <a class="nav-link" href="/admin/riwayat"><b>Riwayat Pembelian</b></a>
+                        <a class="nav-link" href="/admin/tambah"><b>Tambah Admin</b></a>
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">

@@ -28,6 +28,8 @@ Route::put('admin/ticket/update{id}', 'ticketcontroller@update')->name('admin.ti
 Route::get('admin/ticket/hapus{id}', 'ticketcontroller@destroy')->name('admin.ticket-hapus')->middleware('is_admin');
 Route::get('ticket/cari', 'ticketcontroller@cari')->name('admin.ticket-cari')->middleware('is_admin');
 Route::get('admin/riwayat', 'ticketcontroller@riwayat')->name('admin.ticket-riwayat')->middleware('is_admin');
+Route::get('admin/tambah', 'ticketcontroller@tambahadmin')->name('admin.tambahadmin')->middleware('is_admin');
+Route::post('user/tambah', 'HomeController@tambahuser')->name('user.tambah')->middleware('is_admin');
 
 Route::get('pesan{id}', 'transaksicontroller@index');
 Route::post('ticket/beli', 'transaksicontroller@transaksi');

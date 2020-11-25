@@ -81,4 +81,8 @@ class ticketcontroller extends Controller
     	$riwayat = DB::table('transaksis')->get();
     	return view('admin.riwayat',['riwayat' => $riwayat]);
     }
+
+    public function tambahadmin(){
+        return view(('admin.tambah-admin'));
+    }
 }
